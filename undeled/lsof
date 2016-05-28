@@ -1,0 +1,7 @@
+```
+[whz@xxx ~]$ lsof | grep deleted | grep whz_test_rm_file
+python    32736        whz    3r      REG                8,2        288  10492221 /www/whz/home/whz/whz_test_rm_file (deleted)
+[whz@xxx ~]$ cp /proc/32736/fd/3  bak.whz_test_rm_file
+[whz@xxx ~]$ md5sum  bak.whz_test_rm_file 
+9060fd439c61cc8c10b410d94703d957  bak.whz_test_rm_file
+```

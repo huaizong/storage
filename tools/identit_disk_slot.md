@@ -2,12 +2,12 @@
 
 
 总结下定位硬盘槽位的方法, 一般可以直接通过  /proc/scsi/scsi 查看，但在发生热插拔磁盘的情况下信息可能不准确,
-sg_map 工具在发生热插拔磁盘的情况下仍可以显示槽位与逻辑盘符的关系.
+sg3_util 工具处理这种问题，在生成环境目前试验并不成功，应该跟具体的硬件支持有关系。
 
 
 
 
-```
+``
 [root@xxxx ~]# rpm -qf /usr/bin/sg_map
 sg3_utils-1.28-10.el6_7.x86_64
 [root@xxxx ~]# rpm -qf /usr/bin/lsscsi
